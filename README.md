@@ -1,6 +1,6 @@
 This repo demonstrates the problem of "offline installations of a package with VCS URL fails even if the dependency is already installed."
 
-This was tested with `pip 22.1.2`
+This was tested with `pip 22.1.2`, but as far as I know can be reproduced on any version of `pip` since the new resolver was rolled out.
 
 1. With a connection to the internet, `pip install .` pulls the VCS URL at install time and succeeds:
 ```
