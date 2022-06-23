@@ -1,5 +1,7 @@
 This repo demonstrates the problem of "offline installations of a package with VCS URL fails even if the dependency is already installed."
 
+This was tested with `pip 22.1.2`
+
 1. With a connection to the internet, `pip install .` pulls the VCS URL at install time and succeeds:
 ```
 Processing /Users/alkasm/prog/test-vcs-url
@@ -16,7 +18,7 @@ Installing collected packages: test-pkg
   Running setup.py install for test-pkg ... done
 Successfully installed test-pkg-0.0.0
 ```
-2. If you then disconnect from the internet and try to `pip install .` again (tested with 22.1.2), the package will fail to install with an error like:
+2. If you then disconnect from the internet and try to `pip install .` again, the package will fail to install with an error like:
 ```
 pip install .
 Processing /Users/alkasm/prog/test-vcs-url
